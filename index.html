@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rosos — Web sitesi hizmeti</title>
+<meta name="description" content="rosos: öğrenciler, freelancer'lar ve küçük işletmeler için hazır, hızlı ve uygun fiyatlı web siteleri.">
+<meta property="og:title" content="rosos — Web sitesi hizmeti">
+<meta property="og:description" content="rosos: öğrenciler, freelancer'lar ve küçük işletmeler için hazır, hızlı ve uygun fiyatlı web siteleri.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B44FF}a:hover{color:#1A2FCC}
+summary{cursor:pointer}
+@keyframes vt-type{0%{width:0}60%,100%{width:22ch}}
+@keyframes vt-blink{50%{opacity:0}}
+@keyframes vt-spin{to{transform:rotate(360deg)}}
+@keyframes vt-spin-rev{to{transform:rotate(-360deg)}}
+@keyframes vt-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes vt-slide{0%{opacity:0}5%,33%{opacity:1}38%,100%{opacity:0}}
+@keyframes vt-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes vt-steam{0%{opacity:0;transform:translateY(0)}40%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes vt-float{50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="sayfa">
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #101218; background: #FFFFFF;">
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E4EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #101218;">
+<span style="width: 34px; height: 34px; border-radius: 9px; background: {{accent}}; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2-3 3.5-7 5-7s.5 6 2.5 6 3-5 4.5-5 .5 4 2.5 4 2-1 3-2"></path><path d="M4 20h16"></path></svg>
+</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 23px; letter-spacing: -0.01em;">rosos</span>
+</a>
+<nav aria-label="Ana menü" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;">
+<a href="#kimler-icin" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Kimler için</a>
+<a href="#tasarimlar" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Tasarımlar</a>
+<a href="#ornekler" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Örnekler</a>
+<a href="#nasil-calisir" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Nasıl çalışır</a>
+<a href="#sss" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">SSS</a>
+<button type="button" onClick="{{openCart}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; box-sizing: border-box; padding: 0 8px 0 16px; border: none; border-radius: 10px; background: #101218; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>Sepet<span style="padding: 4px 10px; border-radius: 999px; background: #DDF56B; color: #101218; font-size: 14px;">{{totalText}}</span></button>
+</nav>
+</div>
+</header>
+
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+<span style="align-self: flex-start; background: #DDF56B; color: #101218; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px;">Öğrenciler · Freelancer'lar · Küçük işletmeler</span>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 68px); line-height: 1.05; letter-spacing: -0.02em;">Kendini anlatan bir web siten olsun.</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4B5162; max-width: 520px;">Portföyün, hizmetlerin ya da işletmen birkaç gün içinde yayında. Sen bilgilerini gönder; tasarımı, kurulumu ve yayına almayı biz yapalım.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<a href="#tasarimlar" style="display: inline-flex; align-items: center; min-height: 52px; box-sizing: border-box; padding: 0 26px; border-radius: 12px; background: {{accent}}; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600;">Tasarımları gör</a>
+<a href="https://wa.me/905526767983" style="display: inline-flex; align-items: center; min-height: 52px; box-sizing: border-box; padding: 0 26px; border-radius: 12px; border: 1px solid #C9CCD6; color: #101218; text-decoration: none; font-size: 16px; font-weight: 600;">WhatsApp'tan yaz</a>
+</div>
+<p style="margin: 0; font-size: 14px; color: #5A6072;">Mobil uyumlu · Kendi alan adınla · Teslimden sonra destek</p>
+</div>
+
+<div style="flex: 1 1 440px; min-width: 0;">
+<div aria-hidden="true" style="border: 1px solid #E2E4EA; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 24px 60px rgba(16, 18, 24, 0.12);">
+<div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F4F7; border-bottom: 1px solid #E2E4EA;">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D5D8E0;"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D5D8E0;"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D5D8E0;"></span>
+<div style="margin-left: 12px; flex: 1; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 8px; padding: 6px 12px; font-size: 13px; color: #5A6072;">senin-adin.com</div>
+</div>
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #DDF56B; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">D</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">Deniz</div>
+<div style="font-size: 14px; color: #5A6072;">Bilgisayar Mühendisliği öğrencisi · Gömülü sistemler</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="padding: 6px 12px; border-radius: 999px; background: {{accent}}; color: #FFFFFF; font-size: 13px; font-weight: 600;">Projeler</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3F4F7; color: #101218; font-size: 13px; font-weight: 500;">Hakkımda</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3F4F7; color: #101218; font-size: 13px; font-weight: 500;">CV</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3F4F7; color: #101218; font-size: 13px; font-weight: 500;">İletişim</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+<div style="border: 1px solid #E2E4EA; border-radius: 12px; overflow: hidden;">
+<div style="height: 96px; background: #E6E9FF;"></div>
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 14px; font-weight: 600;">Çizgi izleyen robot</div>
+<div style="font-size: 12px; color: #5A6072;">STM32 · C</div>
+</div>
+</div>
+<div style="border: 1px solid #E2E4EA; border-radius: 12px; overflow: hidden;">
+<div style="height: 96px; background: #EEF9C8;"></div>
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 14px; font-weight: 600;">Hava durumu uygulaması</div>
+<div style="font-size: 12px; color: #5A6072;">Python · API</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="kimler-icin" style="background: #F3F4F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Kimler için</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Herkesin ihtiyacı farklı, sitesi de farklı olmalı.</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+<div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDF56B; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Öğrenciler ve yeni mezunlar</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Staj ve iş başvurularında CV'nin yanına bir link ekle. Projelerini, GitHub'ını ve sertifikalarını tek yerde göster.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Projelerin ve teknik becerilerin</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>İndirilebilir CV</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>LinkedIn ve GitHub bağlantıları</li>
+</ul>
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDF56B; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 13h18"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Freelancer'lar</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Müşteriye "işlerime Instagram'dan bak" demek yerine kendi siteni gönder. Hizmetlerin, işlerin ve referansların bir arada.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Hizmetler ve iş örnekleri galerisi</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Müşteri yorumları bölümü</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Teklif ve iletişim formu</li>
+</ul>
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDF56B; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 5 4h14l2 6Z"></path><path d="M4 10v10h16V10"></path><path d="M10 20v-5h4v5"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Küçük işletmeler</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Kafe, kuaför, atölye ya da ofis… Müşterilerin seni Google'da aradığında düzgün bir siteyle karşılaşsın.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Hizmet, menü ve fiyat listesi</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Harita, adres ve çalışma saatleri</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Tek tıkla WhatsApp butonu</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="tasarimlar">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Tasarımlar</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Beğendiğin tasarımı seç, gerisini biz uyarlayalım.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Normal ya da animasyonlu, 14 tasarımın hepsini canlı olarak açıp gezebilirsin. Her tasarım senin bilgilerin, renklerin ve fotoğraflarınla hazırlanır. Birden fazla siten mi olacak? İstediğin kadar tasarımı sepete ekleyebilirsin.</p>
+<p style="margin: 0; padding: 12px 16px; border-radius: 12px; border: 1px dashed #C9CCD6; font-size: 15px; line-height: 1.5; color: #4B5162;"><strong style="color: #101218;">Not:</strong> Canlı önizlemeler tarzı göstermek için hazırlanmış kısa örneklerdir; içlerindeki kişi, işletme ve fiyatlar uydurmadır. Sipariş verdiğinde siten senin içeriklerinle, daha fazla bölüm ve sayfayla tam olarak hazırlanır.</p>
+</div>
+
+<div role="group" aria-label="Tasarım türü" style="align-self: flex-start; display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 14px; background: #F3F4F7;">
+<button type="button" aria-pressed="{{k.normal.pressed}}" onClick="{{k.normal.pick}}" style="min-height: 44px; padding: 0 20px; border: none; border-radius: 10px; background: {{k.normal.bg}}; box-shadow: {{k.normal.shadow}}; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Normal tasarımlar · 8</button>
+<button type="button" aria-pressed="{{k.anim.pressed}}" onClick="{{k.anim.pick}}" style="min-height: 44px; padding: 0 20px; border: none; border-radius: 10px; background: {{k.anim.bg}}; box-shadow: {{k.anim.shadow}}; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Animasyonlu tasarımlar · 6</button>
+</div>
+
+<sc-if value="{{isAnim}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; padding: 14px 18px; border-radius: 12px; background: #EEF9C8; font-size: 15px; line-height: 1.5; color: #101218;">Animasyonlu tasarımlarda yazı efektleri, kayan şeritler ve hareketli geçişler var. Her tasarımın fiyatı kartında yazıyor.</p>
+</sc-if>
+
+<div role="group" aria-label="Tasarımları filtrele" style="display: flex; flex-wrap: wrap; gap: 8px;">
+<button type="button" aria-pressed="{{f.all.pressed}}" onClick="{{f.all.pick}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{f.all.border}}; background: {{f.all.bg}}; color: {{f.all.color}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Hepsi</button>
+<button type="button" aria-pressed="{{f.ogrenci.pressed}}" onClick="{{f.ogrenci.pick}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{f.ogrenci.border}}; background: {{f.ogrenci.bg}}; color: {{f.ogrenci.color}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Öğrenciler</button>
+<button type="button" aria-pressed="{{f.freelancer.pressed}}" onClick="{{f.freelancer.pick}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{f.freelancer.border}}; background: {{f.freelancer.bg}}; color: {{f.freelancer.color}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Freelancer'lar</button>
+<button type="button" aria-pressed="{{f.isletme.pressed}}" onClick="{{f.isletme.pick}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{f.isletme.border}}; background: {{f.isletme.bg}}; color: {{f.isletme.color}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">İşletmeler</button>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+
+<sc-if value="{{cards.sade.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.sade.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #E2E4EA; padding: 28px 32px; display: flex; flex-direction: column; gap: 10px;">
+<div style="font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 700; color: #101218;">Deniz</div>
+<div style="font-size: 12px; color: #5A6072;">Bilgisayar Mühendisliği öğrencisi</div>
+<div style="height: 1px; background: #101218; margin: 6px 0;"></div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #101218;"><span>Çizgi izleyen robot</span><span style="color: #5A6072;">2026</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #101218;"><span>Görüntü sınıflandırma</span><span style="color: #5A6072;">2025</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #101218;"><span>Yazılım stajı</span><span style="color: #5A6072;">2025</span></div>
+<div style="display: flex; gap: 14px; margin-top: 6px; font-size: 12px; font-weight: 600; color: #101218; text-decoration: underline;"><span>CV indir</span><span>GitHub</span><span>LinkedIn</span></div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Sade <span style="font-weight: 600; color: #4B5162;">· {{cards.sade.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Beyaz zemin, sade yazılar. CV'sini ve projelerini öne çıkarmak isteyen öğrenciler ve akademisyenler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/sade.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.sade.pressed}}" onClick="{{cards.sade.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.sade.btnBorder}}; background: {{cards.sade.btnBg}}; color: {{cards.sade.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.sade.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.gece.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.gece.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #0D0F14; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; font-family: ui-monospace, 'SF Mono', Menlo, monospace;">
+<div style="font-size: 12px; color: #8B93A7;">~/portfolio</div>
+<div style="font-size: 20px; font-weight: 700; color: #9EF01A;">&gt; merhaba, ben Can</div>
+<div style="font-size: 12px; color: #C4C8D2;">Gömülü yazılım geliştirici</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px;">
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">C</span>
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">Python</span>
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">STM32</span>
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">Linux</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+<div style="background: #1A1D26; border-radius: 8px; padding: 12px; font-size: 11px; color: #E5E7EB;">motor-kontrol/</div>
+<div style="background: #1A1D26; border-radius: 8px; padding: 12px; font-size: 11px; color: #E5E7EB;">sensor-fuzyonu/</div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Gece <span style="font-weight: 600; color: #4B5162;">· {{cards.gece.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci · Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Koyu tema, kod havası. Yazılımcılar, mühendislik öğrencileri ve teknik işler yapan freelancer'lar için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/gece.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.gece.pressed}}" onClick="{{cards.gece.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.gece.btnBorder}}; background: {{cards.gece.btnBg}}; color: {{cards.gece.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.gece.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.renkli.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.renkli.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFE14D; position: relative; padding: 28px;">
+<div style="position: absolute; right: -30px; top: -30px; width: 150px; height: 150px; border-radius: 50%; background: #FF6B35;"></div>
+<div style="position: absolute; right: 60px; bottom: -24px; width: 110px; height: 110px; background: #2B44FF; transform: rotate(12deg);"></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; max-width: 230px;">
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; line-height: 1.02; color: #101218;">Merhaba, ben Ece.</div>
+<div style="font-size: 13px; font-weight: 500; color: #101218;">Grafik tasarım · İllüstrasyon</div>
+<span style="align-self: flex-start; margin-top: 6px; background: #101218; color: #FFE14D; font-size: 12px; font-weight: 600; padding: 8px 14px; border-radius: 999px;">İşlerime bak</span>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Renkli <span style="font-weight: 600; color: #4B5162;">· {{cards.renkli.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Canlı renkler, büyük yazılar. Tasarımcılar ve içerik üreticileri gibi akılda kalmak isteyenler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/renkli.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.renkli.pressed}}" onClick="{{cards.renkli.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.renkli.btnBorder}}; background: {{cards.renkli.btnBg}}; color: {{cards.renkli.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.renkli.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.galeri.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.galeri.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #111318; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #E5E7EB;"><span style="font-weight: 700; letter-spacing: 0.12em;">ARDA</span><span style="color: #A3A8B3;">Fotoğraf</span></div>
+<div style="flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 6px;">
+<div style="background: #3A3F4B; border-radius: 4px;"></div>
+<div style="background: #8B919C; border-radius: 4px;"></div>
+<div style="background: #565C68; border-radius: 4px;"></div>
+<div style="background: #A3A8B3; border-radius: 4px;"></div>
+<div style="background: #2F3540; border-radius: 4px;"></div>
+<div style="background: #6B7280; border-radius: 4px;"></div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Galeri <span style="font-weight: 600; color: #4B5162;">· {{cards.galeri.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Fotoğraflar ön planda, yazı az. Fotoğrafçılar, mimarlar ve işini görselle anlatanlar için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/galeri.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.galeri.pressed}}" onClick="{{cards.galeri.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.galeri.btnBorder}}; background: {{cards.galeri.btnBg}}; color: {{cards.galeri.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.galeri.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.kurumsal.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.kurumsal.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #F5F7FA; display: flex; flex-direction: column;">
+<div style="background: #13294B; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px;"><span style="color: #FFFFFF; font-size: 13px; font-weight: 700;">Örnek Danışmanlık</span><span style="display: flex; gap: 10px; font-size: 11px; color: #C9D3E3;"><span>Hizmetler</span><span>Hakkımızda</span><span>İletişim</span></span></div>
+<div style="padding: 22px 20px; display: flex; flex-direction: column; gap: 16px;">
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #13294B; line-height: 1.15;">Doğru karar,<br>doğru zamanda.</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+<div style="background: #FFFFFF; border: 1px solid #DDE3EC; border-radius: 8px; padding: 12px 10px; font-size: 11px; font-weight: 600; color: #13294B;">Muhasebe</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EC; border-radius: 8px; padding: 12px 10px; font-size: 11px; font-weight: 600; color: #13294B;">Vergi</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EC; border-radius: 8px; padding: 12px 10px; font-size: 11px; font-weight: 600; color: #13294B;">Danışmanlık</div>
+</div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Kurumsal <span style="font-weight: 600; color: #4B5162;">· {{cards.kurumsal.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer · İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Lacivert tonlar, düzenli yapı. Danışmanlar, ofisler ve güven vermek isteyen işletmeler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/kurumsal.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.kurumsal.pressed}}" onClick="{{cards.kurumsal.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.kurumsal.btnBorder}}; background: {{cards.kurumsal.btnBg}}; color: {{cards.kurumsal.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.kurumsal.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.lezzet.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.lezzet.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #F6EFE6; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><span style="font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #5B3A1E;">Örnek Kafe</span><span style="font-size: 11px; color: #6B4E33;">Açık · 08:00–22:00</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #3B2A1A;"><span>Türk kahvesi</span><span style="flex: 1; border-bottom: 1px dotted #B79E84;"></span><span>₺60</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #3B2A1A;"><span>Mercimek çorbası</span><span style="flex: 1; border-bottom: 1px dotted #B79E84;"></span><span>₺90</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #3B2A1A;"><span>Ev yapımı kek</span><span style="flex: 1; border-bottom: 1px dotted #B79E84;"></span><span>₺75</span></div>
+<div style="display: flex; gap: 8px; margin-top: 8px;">
+<span style="background: #B4532A; color: #FFFFFF; font-size: 12px; font-weight: 600; padding: 8px 14px; border-radius: 999px;">Yol tarifi al</span>
+<span style="border: 1px solid #B4532A; color: #8A3D1E; font-size: 12px; font-weight: 600; padding: 7px 14px; border-radius: 999px;">WhatsApp</span>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Lezzet <span style="font-weight: 600; color: #4B5162;">· {{cards.lezzet.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Sıcak tonlar, menü ve çalışma saatleri öne çıkar. Kafe, restoran ve pastaneler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/lezzet.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.lezzet.pressed}}" onClick="{{cards.lezzet.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.lezzet.btnBorder}}; background: {{cards.lezzet.btnBg}}; color: {{cards.lezzet.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.lezzet.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.akademik.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.akademik.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #E2E4EA; padding: 26px 30px; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #1F4D3A;">Ad Soyad</div>
+<div style="font-size: 12px; color: #5A6072;">Araştırma Görevlisi · Makine Öğrenmesi</div>
+<div style="margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #1F4D3A;">YAYINLAR</div>
+<div style="font-size: 12px; line-height: 1.45; color: #101218;">Görüntü tabanlı bitki hastalığı tespiti <span style="color: #5A6072;">· 2025</span></div>
+<div style="font-size: 12px; line-height: 1.45; color: #101218;">Az veriyle transfer öğrenme <span style="color: #5A6072;">· 2024</span></div>
+<div style="display: flex; gap: 14px; margin-top: 6px; font-size: 12px; font-weight: 600; color: #1F4D3A; text-decoration: underline;"><span>Google Scholar</span><span>ORCID</span><span>CV</span></div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Akademik <span style="font-weight: 600; color: #4B5162;">· {{cards.akademik.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci · Akademisyen</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Yayınlar, dersler ve araştırma alanları düzenli bir yapıda. Yüksek lisans öğrencileri ve akademisyenler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/akademik.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.akademik.pressed}}" onClick="{{cards.akademik.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.akademik.btnBorder}}; background: {{cards.akademik.btnBg}}; color: {{cards.akademik.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.akademik.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.randevu.show}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.randevu.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFF6F9; border-bottom: 1px solid #E2E4EA; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;"><span style="font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: 700; color: #7A1F4E;">Örnek Güzellik</span><span style="background: #7A1F4E; color: #FFFFFF; font-size: 12px; font-weight: 600; padding: 7px 12px; border-radius: 999px;">Randevu al</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1D5E1; font-size: 13px; color: #3A1028;"><span>Saç kesimi · 45 dk</span><span>₺400</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1D5E1; font-size: 13px; color: #3A1028;"><span>Fön · 30 dk</span><span>₺250</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1D5E1; font-size: 13px; color: #3A1028;"><span>Manikür · 40 dk</span><span>₺300</span></div>
+<div style="font-size: 11px; color: #6B3A52;">Pzt–Cmt · 10:00–20:00</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Randevu <span style="font-weight: 600; color: #4B5162;">· {{cards.randevu.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Hizmetler, süreler ve fiyatlar net; randevu butonu hep görünür. Kuaför, güzellik salonu ve klinikler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/randevu.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.randevu.pressed}}" onClick="{{cards.randevu.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.randevu.btnBorder}}; background: {{cards.randevu.btnBg}}; color: {{cards.randevu.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.randevu.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.terminal.show}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.terminal.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #0B0C10; padding: 22px 26px; display: flex; flex-direction: column; gap: 10px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px; color: #C4C8D2;">
+<div style="display: flex; gap: 6px;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #FF5F57;"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #FEBC2E;"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #28C840;"></span></div>
+<div><span style="color: #9EF01A;">$</span> whoami</div>
+<div style="display: flex; align-items: center;"><span style="display: inline-block; overflow: hidden; white-space: nowrap; width: 0; color: #FFFFFF; animation: vt-type 3.4s steps(22) infinite;">can — gömülü yazılımcı</span><span style="display: inline-block; width: 8px; height: 16px; margin-left: 2px; background: #9EF01A; animation: vt-blink 1s steps(1) infinite;"></span></div>
+<div><span style="color: #9EF01A;">$</span> ls projeler/</div>
+<div style="color: #7DD3FC;">motor-kontrol  drone-fc  akilli-sera</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Terminal <span style="font-weight: 600; color: #4B5162;">· {{cards.terminal.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci · Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Yazılar terminalde yazılıyormuş gibi belirir, projeler sırayla gelir. Yazılımcılar için akılda kalan bir giriş.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/terminal.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.terminal.pressed}}" onClick="{{cards.terminal.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.terminal.btnBorder}}; background: {{cards.terminal.btnBg}}; color: {{cards.terminal.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.terminal.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.yorunge.show}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.yorunge.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #EEF1FF; display: flex; align-items: center; justify-content: center;">
+<div style="position: relative; width: 170px; height: 170px;">
+<div style="position: absolute; inset: 0; border: 1px dashed #8D9AE0; border-radius: 50%; animation: vt-spin 14s linear infinite;">
+<span style="position: absolute; left: 61px; top: -12px; width: 48px; height: 24px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border-radius: 999px; font-size: 11px; font-weight: 600; color: #101218; animation: vt-spin-rev 14s linear infinite;">C</span>
+<span style="position: absolute; left: 146px; top: 73px; width: 48px; height: 24px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border-radius: 999px; font-size: 11px; font-weight: 600; color: #101218; animation: vt-spin-rev 14s linear infinite;">Python</span>
+<span style="position: absolute; left: 61px; top: 158px; width: 48px; height: 24px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border-radius: 999px; font-size: 11px; font-weight: 600; color: #101218; animation: vt-spin-rev 14s linear infinite;">PCB</span>
+<span style="position: absolute; left: -24px; top: 73px; width: 48px; height: 24px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border-radius: 999px; font-size: 11px; font-weight: 600; color: #101218; animation: vt-spin-rev 14s linear infinite;">ROS</span>
+</div>
+<div style="position: absolute; left: 49px; top: 49px; width: 72px; height: 72px; border-radius: 50%; background: #2B44FF; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">L</div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Yörünge <span style="font-weight: 600; color: #4B5162;">· {{cards.yorunge.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Becerilerin fotoğrafının etrafında döner. Mühendislik ve robotik öğrencileri için eğlenceli bir portföy.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/yorunge.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.yorunge.pressed}}" onClick="{{cards.yorunge.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.yorunge.btnBorder}}; background: {{cards.yorunge.btnBg}}; color: {{cards.yorunge.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.yorunge.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.serit.show}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.serit.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #101218; display: flex; flex-direction: column; justify-content: space-between; padding-top: 30px;">
+<div style="padding: 0 28px; display: flex; flex-wrap: wrap; gap: 0 10px; font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; line-height: 1.05; color: #FFFFFF;">
+<span style="display: inline-block; animation: vt-rise 2.4s ease-in-out 0s infinite alternate both;">Fikirden</span>
+<span style="display: inline-block; animation: vt-rise 2.4s ease-in-out 0.3s infinite alternate both;">ürüne.</span>
+</div>
+<div style="background: #DDF56B; padding: 12px 0; overflow: hidden; margin-bottom: 28px;">
+<div style="display: flex; width: max-content; animation: vt-marquee 9s linear infinite; font-size: 15px; font-weight: 700; color: #101218; white-space: nowrap;">
+<span style="padding-right: 24px;">Logo · Web sitesi · Sosyal medya · Ambalaj · Afiş ·</span>
+<span style="padding-right: 24px;">Logo · Web sitesi · Sosyal medya · Ambalaj · Afiş ·</span>
+</div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Şerit <span style="font-weight: 600; color: #4B5162;">· {{cards.serit.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Hizmetlerin kayan şeritlerde akar, başlıklar yükselerek gelir. Ajans havası isteyen freelancer'lar için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/serit.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.serit.pressed}}" onClick="{{cards.serit.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.serit.btnBorder}}; background: {{cards.serit.btnBg}}; color: {{cards.serit.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.serit.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.slayt.show}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.slayt.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; position: relative; background: #111318;">
+<div style="position: absolute; inset: 0; background: #5B6B7F; opacity: 0; animation: vt-slide 9s linear 0s infinite;"><div style="position: absolute; left: -10%; right: -10%; bottom: -60px; height: 150px; border-radius: 50%; background: #2F3A48;"></div><span style="position: absolute; left: 18px; bottom: 16px; font-size: 13px; font-weight: 600; color: #FFFFFF;">Kapadokya</span></div>
+<div style="position: absolute; inset: 0; background: #8A6F5A; opacity: 0; animation: vt-slide 9s linear 3s infinite;"><div style="position: absolute; left: 30%; width: 70px; bottom: 0; height: 140px; background: #4A3A2E;"></div><span style="position: absolute; left: 18px; bottom: 16px; font-size: 13px; font-weight: 600; color: #FFFFFF;">İstanbul</span></div>
+<div style="position: absolute; inset: 0; background: #4D6B5C; opacity: 0; animation: vt-slide 9s linear 6s infinite;"><div style="position: absolute; left: -20%; right: 30%; bottom: -50px; height: 130px; border-radius: 50%; background: #2C4237;"></div><span style="position: absolute; left: 18px; bottom: 16px; font-size: 13px; font-weight: 600; color: #FFFFFF;">Toroslar</span></div>
+<span style="position: absolute; left: 18px; top: 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #FFFFFF;">ARDA</span>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Slayt <span style="font-weight: 600; color: #4B5162;">· {{cards.slayt.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Tam ekran fotoğraflar yumuşak geçişlerle değişir, galeride yakınlaşma efekti var. Fotoğrafçılar için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/slayt.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.slayt.pressed}}" onClick="{{cards.slayt.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.slayt.btnBorder}}; background: {{cards.slayt.btnBg}}; color: {{cards.slayt.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.slayt.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.sahne.show}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.sahne.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #0F1E3D; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+<div style="display: flex; flex-wrap: wrap; gap: 0 10px; font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; line-height: 1.15; color: #FFFFFF;">
+<span style="display: inline-block; animation: vt-rise 2.6s ease-in-out 0s infinite alternate both;">Büyümenize</span>
+<span style="display: inline-block; animation: vt-rise 2.6s ease-in-out 0.3s infinite alternate both;">eşlik</span>
+<span style="display: inline-block; animation: vt-rise 2.6s ease-in-out 0.6s infinite alternate both;">ediyoruz.</span>
+</div>
+<div style="display: flex; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 2px; animation: vt-rise 2.6s ease-in-out 0.9s infinite alternate both;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #DDF56B;">12 yıl</span><span style="font-size: 11px; color: #B8C4DE;">deneyim</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px; animation: vt-rise 2.6s ease-in-out 1.1s infinite alternate both;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #DDF56B;">300+</span><span style="font-size: 11px; color: #B8C4DE;">müşteri</span></div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Sahne <span style="font-weight: 600; color: #4B5162;">· {{cards.sahne.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Başlıklar kelime kelime belirir, rakamlar ve hizmetler sırayla gelir. Etkileyici görünmek isteyen şirketler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/sahne.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.sahne.pressed}}" onClick="{{cards.sahne.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.sahne.btnBorder}}; background: {{cards.sahne.btnBg}}; color: {{cards.sahne.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.sahne.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cards.firin.show}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.firin.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FBF1E4; padding: 24px 28px; display: flex; align-items: center; gap: 24px;">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #6B3A16;">Örnek Fırın</span>
+<span style="font-size: 12px; line-height: 1.4; color: #6B4E33;">Her sabah 07:00'de taze ekmek</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;">
+<span style="background: #FFFFFF; color: #6B3A16; font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 999px; animation: vt-float 3s ease-in-out 0s infinite;">Simit</span>
+<span style="background: #FFFFFF; color: #6B3A16; font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 999px; animation: vt-float 3s ease-in-out 0.5s infinite;">Poğaça</span>
+<span style="background: #FFFFFF; color: #6B3A16; font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 999px; animation: vt-float 3s ease-in-out 1s infinite;">Ekşi maya</span>
+</div>
+</div>
+<div style="position: relative; width: 90px; height: 120px; flex-shrink: 0;">
+<span style="position: absolute; left: 22px; top: 6px; width: 5px; height: 26px; border-radius: 3px; background: #C9A88A; animation: vt-steam 2.4s ease-out 0s infinite;"></span>
+<span style="position: absolute; left: 40px; top: 2px; width: 5px; height: 30px; border-radius: 3px; background: #C9A88A; animation: vt-steam 2.4s ease-out 0.6s infinite;"></span>
+<span style="position: absolute; left: 58px; top: 6px; width: 5px; height: 26px; border-radius: 3px; background: #C9A88A; animation: vt-steam 2.4s ease-out 1.2s infinite;"></span>
+<div style="position: absolute; left: 6px; top: 50px; width: 72px; height: 58px; border-radius: 6px 6px 26px 26px; background: #B4532A;"></div>
+<div style="position: absolute; left: 72px; top: 62px; width: 18px; height: 24px; border: 5px solid #B4532A; border-left: none; border-radius: 0 12px 12px 0; box-sizing: border-box;"></div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Fırın <span style="font-weight: 600; color: #4B5162;">· {{cards.firin.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Tüten fincan, süzülen ürünler ve kayan "bugün taze" şeridi. Fırın, pastane ve kafeler için sıcak bir tasarım.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/firin.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.firin.pressed}}" onClick="{{cards.firin.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.firin.btnBorder}}; background: {{cards.firin.btnBg}}; color: {{cards.firin.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.firin.label}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+
+<sc-if value="{{hasSelected}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; border-radius: 14px; background: #101218; color: #FFFFFF;">
+<span style="font-size: 17px;">Sepette: <strong>{{selectedName}}</strong> · {{selectedPrice}}</span>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<button type="button" onClick="{{openCart}}" style="min-height: 48px; padding: 0 22px; border: none; border-radius: 12px; background: #DDF56B; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete git</button>
+</div>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; padding: 26px 28px; border-radius: 18px; background: #EEF9C8;">
+<div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 420px; min-width: 0;">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #101218;">Kendinize özel bir tasarım mı istiyorsunuz?</span>
+<span style="font-size: 16px; line-height: 1.6; color: #2E3608;">Yapabiliriz! Aklınızdaki siteyi WhatsApp üzerinden anlatın; beğendiğiniz sitelerin linklerini de gönderebilirsiniz. Fiyatı birlikte belirleriz.</span>
+</div>
+<a href="https://wa.me/905526767983?text=Merhaba%2C%20kendime%20%C3%B6zel%20bir%20tasar%C4%B1m%20istiyorum.%20Detaylar%3A%20" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 12px; background: #101218; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2L4 20Z"></path></svg>WhatsApp'tan anlatın</a>
+</div>
+</div>
+</section>
+
+<section id="ornekler" style="background: #F3F4F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Örnekler</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Yaptığımız gerçek sitelerden bazıları.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Bunlardan birine benzer bir site istiyorsan doğrudan sepete ekleyebilirsin. Site senin içeriklerinle yeniden hazırlanır; gerçek işlere dayandıkları için fiyatları hazır tasarımlardan farklıdır.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.ornek1.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 200px; box-sizing: border-box; overflow: hidden; background: #000000; padding: 26px 28px; display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+<span style="font-size: 11px; letter-spacing: 0.08em; color: #8B93A7;">COMPUTER VISION · EMBEDDED AI · AUTONOMOUS SYSTEMS</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF;">Read Aloush</span>
+<span style="font-size: 13px; color: #C4C8D2;">AI &amp; Robotics Engineer</span>
+<div style="display: flex; gap: 8px; margin-top: 6px;"><span style="font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; color: #000000;">See the work</span><span style="font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 999px; border: 1px solid #3A3F4B; color: #FFFFFF;">Book a meeting</span></div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700;">readaloush.com <span style="font-weight: 600; color: #4B5162;">· {{cards.ornek1.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Kişisel portföy</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Bu siteye benzer bir kişisel portföy; senin bilgilerin ve projelerinle hazırlanır.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="https://readaloush.com" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Siteyi gör</a>
+<button type="button" aria-pressed="{{cards.ornek1.pressed}}" onClick="{{cards.ornek1.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.ornek1.btnBorder}}; background: {{cards.ornek1.btnBg}}; color: {{cards.ornek1.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.ornek1.label}}</button>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.ornek2.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 200px; box-sizing: border-box; overflow: hidden; background: #0B0C10; padding: 24px 26px; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; line-height: 1.05; color: #FFFFFF;">Yapay zekâ ve robotik mühendisi.</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+<div style="padding: 10px; border-radius: 10px; background: #14161D; display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #DDF56B;">%97,69</span><span style="font-size: 10px; color: #C4C8D2;">atık ayrıştırma</span></div>
+<div style="padding: 10px; border-radius: 10px; background: #14161D; display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #DDF56B;">%98,43</span><span style="font-size: 10px; color: #C4C8D2;">MRI analizi</span></div>
+<div style="padding: 10px; border-radius: 10px; background: #14161D; display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #DDF56B;">2209-A</span><span style="font-size: 10px; color: #C4C8D2;">TÜBİTAK İHA</span></div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700;">Mühendis portföyü <span style="font-weight: 600; color: #4B5162;">· {{cards.ornek2.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Read Aloush</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Projeler, başarı rakamları, deneyim ve yeteneklerle uzun bir portföy. İş ve staj arayan mühendisler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="ornekler/muhendis.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.ornek2.pressed}}" onClick="{{cards.ornek2.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.ornek2.btnBorder}}; background: {{cards.ornek2.btnBg}}; color: {{cards.ornek2.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.ornek2.label}}</button>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.ornek3.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 200px; box-sizing: border-box; overflow: hidden; background: #EEF1FF; display: flex; align-items: center; justify-content: center;">
+<div style="width: 190px; background: #FFFFFF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; box-shadow: 0 10px 24px rgba(43, 68, 255, 0.12);">
+<div style="width: 40px; height: 40px; border-radius: 50%; background: #101218; color: #DDF56B; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700;">RA</div>
+<span style="font-size: 13px; font-weight: 700; color: #101218;">Read Aloush</span>
+<span style="width: 100%; padding: 6px 0; border-radius: 8px; background: #101218; color: #FFFFFF; font-size: 10px; font-weight: 600; text-align: center;">WhatsApp'tan yaz</span>
+<span style="width: 100%; padding: 6px 0; border-radius: 8px; background: #F3F4F7; color: #101218; font-size: 10px; font-weight: 600; text-align: center;">CV'mi indir</span>
+<span style="width: 100%; padding: 6px 0; border-radius: 8px; background: #F3F4F7; color: #101218; font-size: 10px; font-weight: 600; text-align: center;">Projelerim</span>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700;">Dijital kartvizit <span style="font-weight: 600; color: #4B5162;">· {{cards.ornek3.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Read Aloush</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Telefona göre tasarlanmış tek kart: fotoğraf, kısa tanıtım ve tüm bağlantılar. Instagram biyografisine ya da QR koda koymak için ideal.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="ornekler/kartvizit.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="{{cards.ornek3.pressed}}" onClick="{{cards.ornek3.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.ornek3.btnBorder}}; background: {{cards.ornek3.btnBg}}; color: {{cards.ornek3.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.ornek3.label}}</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="nasil-calisir" style="background: #101218; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #B9BDC9;">Nasıl çalışır</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Dört adımda yayındasın.</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">1</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Tasarımını seç</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Beğendiğin tasarımı canlı incele, sepete ekle. İstersen ek hizmet de ekle.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">2</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Sepetini onayla</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Siparişin, numarasıyla birlikte WhatsApp'tan bize ulaşır. Ödeme bilgilerini oradan paylaşırız.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">3</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Taslağı incele</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Birkaç gün içinde taslağı görürsün, değişiklik isteklerini iletirsin.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">4</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Yayına al</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Siten kendi alan adınla yayında. Sonrasında da yanındayız.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sss" style="background: #F3F4F7;">
+<div style="max-width: 860px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px;">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Sık sorulan sorular</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Aklına takılanlar</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Siteyi ne kadar sürede teslim ediyorsunuz?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Tasarıma göre 3–7 iş günü. Süre, içeriklerini (yazı, fotoğraf, proje bilgileri) gönderdiğin gün başlar.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Önizlemeler neden kısa?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Önizlemeler her tasarımın tarzını ve hissini göstermek için hazırlanmış kısa örneklerdir. Teslim edilen sitede senin bilgilerin, fotoğrafların ve ihtiyacın olan tüm bölümler ve sayfalar yer alır.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Alan adı ve barındırma kimin adına olacak?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Senin. Hesaplar senin adına açılır, site tamamen sana ait olur. Yıllık alan adı ve barındırma ücretlerini sağlayıcıya sen ödersin.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Teslimden sonra değişiklik yapabilir miyim?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Revizyon hakların teslimden önce kullanılır. Sonrası için aylık bakım paketi alabilir ya da tek seferlik değişiklik isteyebilirsin.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Yazıları ben mi hazırlamalıyım?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Temel bilgileri sen verirsin; metinleri düzenleyip toparlamana biz yardım ederiz.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Ödemeyi nasıl yapıyorum?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Sepetinde "Ödeme yap"a bastığında siparişin WhatsApp'tan bize ulaşır, ödeme bilgilerini oradan paylaşırız. Yarısı işe başlarken, yarısı teslimde ödenir.</p>
+</details>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #E2E4EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; color: #5A6072;">
+<span>© 2026 rosos</span>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+<a href="#tasarimlar" style="color: #5A6072; text-decoration: none;">Tasarımlar</a>
+<a href="#sss" style="color: #5A6072; text-decoration: none;">SSS</a>
+<a href="https://wa.me/905526767983" style="color: #5A6072; text-decoration: none;">WhatsApp: +90 552 676 79 83</a>
+</div>
+</div>
+</footer>
+
+<sc-if value="{{showFloat}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{openCart}}" style="position: fixed; right: 24px; bottom: 24px; z-index: 50; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 22px; border: none; border-radius: 999px; background: #101218; color: #FFFFFF; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; box-shadow: 0 12px 30px rgba(16, 18, 24, 0.28);">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>
+Sepet · {{totalText}}
+</button>
+</sc-if>
+
+<sc-if value="{{cartOpen}}" hint-placeholder-val="{{ false }}">
+<div style="position: fixed; inset: 0; z-index: 60; display: flex; justify-content: flex-end; background: rgba(16, 18, 24, 0.45);">
+<div role="dialog" aria-modal="true" aria-labelledby="sepet-baslik" style="width: 100%; max-width: 460px; height: 100%; box-sizing: border-box; overflow-y: auto; background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+<h2 id="sepet-baslik" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700;">{{cartTitle}}</h2>
+<button type="button" aria-label="Sepeti kapat" onClick="{{closeCart}}" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #E2E4EA; border-radius: 12px; background: #FFFFFF; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
+</div>
+
+<sc-if value="{{isCartStep}}" hint-placeholder-val="{{ true }}">
+<sc-if value="{{isEmpty}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px 0;">
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Sepetin şu an boş. Önce bir tasarım ve bir paket seç.</p>
+<button type="button" onClick="{{goDesigns}}" style="align-self: flex-start; min-height: 48px; padding: 0 20px; border: none; border-radius: 12px; background: {{accent}}; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Tasarımlara göz at</button>
+</div>
+</sc-if>
+
+<sc-if value="{{hasItems}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 22px;">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column;">
+<sc-for list="{{lines}}" as="line" hint-placeholder-count="3">
+<li style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E4EA;">
+<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+<span style="font-size: 15px; font-weight: 600;">{{line.label}}</span>
+<span style="font-size: 13px; color: #5A6072;">{{line.sub}}</span>
+</div>
+<div style="display: flex; align-items: center; gap: 6px; flex-shrink: 0;">
+<span style="font-size: 15px; font-weight: 600; white-space: nowrap;">{{line.amount}}</span>
+<button type="button" aria-label="{{line.removeLabel}}" onClick="{{line.remove}}" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: none; border-radius: 10px; background: transparent; cursor: pointer;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6072" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
+</div>
+</li>
+</sc-for>
+</ul>
+
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border-radius: 14px; border: 1px solid #E2E4EA;">
+<div style="display: flex; flex-direction: column; gap: 2px;">
+<span style="font-size: 15px; font-weight: 600;">Ek hizmet ekle</span>
+<span style="font-size: 13px; color: #5A6072;">Bakım ve İngilizce sürüm, sepetteki her site için ayrı hesaplanır.</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<button type="button" aria-pressed="{{x.bakim.pressed}}" onClick="{{x.bakim.toggle}}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid {{x.bakim.border}}; background: {{x.bakim.bg}}; color: {{x.bakim.color}}; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">{{x.bakim.mark}}Aylık bakım · ₺250/ay</button>
+<button type="button" aria-pressed="{{x.ingilizce.pressed}}" onClick="{{x.ingilizce.toggle}}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid {{x.ingilizce.border}}; background: {{x.ingilizce.bg}}; color: {{x.ingilizce.color}}; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">{{x.ingilizce.mark}}İngilizce sürüm · ₺750</button>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 48px; padding: 0 2px 0 14px; border-radius: 999px; border: 1px solid #C9CCD6;">
+<span style="font-size: 14px; font-weight: 600;">Ek sayfa · ₺400</span>
+<div style="display: flex; align-items: center; gap: 2px;">
+<button type="button" aria-label="Ek sayfa sayısını azalt" onClick="{{pageMinus}}" style="width: 44px; height: 44px; border: none; border-radius: 50%; background: #F3F4F7; color: #101218; font-size: 20px; font-weight: 600; font-family: inherit; cursor: pointer;">−</button>
+<span aria-live="polite" style="min-width: 28px; text-align: center; font-size: 16px; font-weight: 700;">{{extraPages}}</span>
+<button type="button" aria-label="Ek sayfa sayısını artır" onClick="{{pagePlus}}" style="width: 44px; height: 44px; border: none; border-radius: 50%; background: #F3F4F7; color: #101218; font-size: 20px; font-weight: 600; font-family: inherit; cursor: pointer;">+</button>
+</div>
+</div>
+</div>
+
+<details style="padding: 14px 16px; border-radius: 14px; background: #F3F4F7;">
+<summary style="font-size: 15px; font-weight: 600; min-height: 24px;">Her tasarıma dahil olanlar</summary>
+<ul style="list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
+<li style="display: flex; gap: 8px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Mobil uyumlu tasarım</li>
+<li style="display: flex; gap: 8px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Kendi alan adına bağlama</li>
+<li style="display: flex; gap: 8px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>WhatsApp butonu</li>
+<li style="display: flex; gap: 8px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Google'da görünme ayarları</li>
+<li style="display: flex; gap: 8px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>2 revizyon hakkı</li>
+<li style="display: flex; gap: 8px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>3–7 iş gününde teslim</li>
+</ul>
+<p style="margin: 12px 0 0; font-size: 13px; line-height: 1.5; color: #4B5162;">Alan adı ve barındırma ücretleri ayrıdır; hesaplar senin adına açılır, site tamamen sana ait olur.</p>
+</details>
+
+<sc-if value="{{noPkg}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; border-radius: 12px; background: #FFF1DE; color: #6A3600; font-size: 15px;">
+<span>Siparişi tamamlamak için bir tasarım seçmelisin.</span>
+<button type="button" onClick="{{goDesigns}}" style="min-height: 44px; padding: 0 14px; border: 1px solid #6A3600; border-radius: 10px; background: transparent; color: #6A3600; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Tasarımlara göz at</button>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: #F3F4F7;">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><span style="font-size: 15px; font-weight: 600;">Tek seferlik toplam</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700;">{{totalText}}</span></div>
+<sc-if value="{{hasMonthly}}" hint-placeholder-val="{{ false }}"><div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: #4B5162;"><span>Aylık bakım</span><span>{{monthlyText}}</span></div></sc-if>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label for="c-ad" style="font-size: 14px; font-weight: 600;">Ad soyad</label>
+<input id="c-ad" type="text" autocomplete="name" placeholder="Adın ve soyadın" value="{{name}}" onChange="{{onName}}" style="min-height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C9CCD6; border-radius: 10px; font-size: 16px; font-family: inherit;">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label for="c-not" style="font-size: 14px; font-weight: 600;">Not (isteğe bağlı)</label>
+<textarea id="c-not" rows="3" placeholder="Örn. renk tercihin, teslim tarihi…" value="{{note}}" onChange="{{onNote}}" style="box-sizing: border-box; padding: 12px 14px; border: 1px solid #C9CCD6; border-radius: 10px; font-size: 16px; font-family: inherit; resize: vertical;"></textarea>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<button type="button" aria-disabled="{{confirmDisabled}}" onClick="{{confirm}}" style="min-height: 54px; border: none; border-radius: 12px; background: {{confirmBg}}; color: {{confirmColor}}; font-size: 17px; font-weight: 700; font-family: inherit; cursor: {{confirmCursor}};">Siparişi onayla</button>
+<span style="font-size: 13px; color: #5A6072; text-align: center;">{{confirmHint}}</span>
+</div>
+</div>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{isDoneStep}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: 14px; background: #EEF9C8;">
+<span style="font-size: 14px; font-weight: 600; color: #3B4700;">Sipariş numaran</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.02em;">{{orderNo}}</span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column;">
+<sc-for list="{{lines}}" as="line" hint-placeholder-count="3">
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E2E4EA; font-size: 15px;"><span>{{line.label}}</span><span style="font-weight: 600; white-space: nowrap;">{{line.amount}}</span></li>
+</sc-for>
+</ul>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><span style="font-size: 15px; font-weight: 600;">Tek seferlik toplam</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700;">{{totalText}}</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5162;">"Ödeme yap"a bastığında WhatsApp açılır ve sipariş detayların hazır mesaj olarak gelir. Mesajı gönder, ödeme bilgilerini hemen iletelim.</p>
+<a href="{{waLink}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; border-radius: 12px; background: #25D366; color: #08311A; text-decoration: none; font-size: 17px; font-weight: 700;">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#08311A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2L4 20Z"></path><path d="M9 9.5c.3 1.8 1.7 3.2 3.5 3.5"></path></svg>
+Ödeme yap · WhatsApp
+</a>
+<button type="button" onClick="{{backToCart}}" style="min-height: 48px; border: 1px solid #C9CCD6; border-radius: 12px; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepeti düzenle</button>
+</div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+</div>
+</template>
+<script src="assets/dc.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

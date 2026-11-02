@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminal — canlı önizleme</title>
+<meta name="description" content="rosos: öğrenciler, freelancer'lar ve küçük işletmeler için hazır, hızlı ve uygun fiyatlı web siteleri.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#9EF01A}a:hover{color:#C6F96B}
+@keyframes t-type{from{width:0}to{width:32ch}}
+@keyframes t-show{from{opacity:0}to{opacity:1}}
+@keyframes t-blink{50%{opacity:0}}
+@keyframes t-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.pcard{transition:transform .2s ease,border-color .2s ease}
+.pcard:hover{transform:translateY(-4px);border-color:#9EF01A !important}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}.rm-show{opacity:1 !important;width:auto !important;transform:none !important}}
+</style>
+</head>
+<body>
+<div style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; color: #E5E7EB; background: #0B0C10;">
+<div style="background: #101218; color: #FFFFFF; border-bottom: 1px solid #23262E;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 4px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; font-family: 'Inter', system-ui, sans-serif; font-size: 14px;">
+<span><strong>rosos</strong> · Canlı önizleme: Terminal (animasyonlu)</span>
+<span style="font-size: 13px; color: #C4C8D2;">Bu kısa bir önizleme · Teslim edilen site senin içeriklerinle, daha fazla bölüm ve sayfayla hazırlanır.</span>
+<a href="../index.html#tasarimlar" style="display: inline-flex; align-items: center; min-height: 44px; color: #DDF56B; font-weight: 600; text-decoration: none;">← Tasarımlara dön</a>
+</div>
+</div>
+
+<main style="max-width: 1000px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 64px;">
+<section style="border: 1px solid #262A35; border-radius: 14px; overflow: hidden; background: #111319;">
+<div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #262A35;">
+<span style="width: 12px; height: 12px; border-radius: 50%; background: #FF5F57;"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #FEBC2E;"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #28C840;"></span>
+<span style="margin-left: 10px; font-size: 13px; color: #8B93A7;">can@portfolio: ~</span>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; line-height: 1.6;">
+<div><span style="color: #9EF01A;">$</span> whoami</div>
+<div style="display: flex; align-items: center;"><h1 class="rm-show" style="margin: 0; display: inline-block; overflow: hidden; white-space: nowrap; width: 0; font-size: clamp(16px, 2.4vw, 26px); font-weight: 700; color: #FFFFFF; animation: t-type 2s steps(32) 0.6s forwards;">can — gömülü yazılım geliştirici</h1></div>
+<div class="rm-show" style="opacity: 0; animation: t-show 0.3s ease 3s forwards;"><span style="color: #9EF01A;">$</span> cat hakkimda.txt</div>
+<p class="rm-show" style="margin: 0; max-width: 680px; color: #C4C8D2; opacity: 0; animation: t-show 0.4s ease 3.4s forwards;">Mikrodenetleyiciler, motor kontrolü ve gerçek zamanlı sistemler üzerine çalışıyorum. Donanımla konuşan yazılımlar yazmayı seviyorum.</p>
+<div class="rm-show" style="opacity: 0; animation: t-show 0.3s ease 4s forwards;"><span style="color: #9EF01A;">$</span> ls projeler/ <span style="display: inline-block; width: 10px; height: 20px; vertical-align: middle; background: #9EF01A; animation: t-blink 1s steps(1) infinite;"></span></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 18px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+<a href="#" class="pcard rm-show" style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 12px; background: #161922; border: 1px solid #262A35; text-decoration: none; color: #E5E7EB; opacity: 0; animation: t-up 0.6s ease 4.6s forwards;"><span style="font-size: 17px; font-weight: 700; color: #9EF01A;">motor-kontrol/</span><span style="font-size: 14px; line-height: 1.6; color: #C4C8D2;">BLDC motor için FOC sürücü.</span><span style="font-size: 12px; color: #8B93A7;">C · STM32G4</span></a>
+<a href="#" class="pcard rm-show" style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 12px; background: #161922; border: 1px solid #262A35; text-decoration: none; color: #E5E7EB; opacity: 0; animation: t-up 0.6s ease 4.8s forwards;"><span style="font-size: 17px; font-weight: 700; color: #9EF01A;">drone-fc/</span><span style="font-size: 14px; line-height: 1.6; color: #C4C8D2;">Quadcopter uçuş kontrolcüsü.</span><span style="font-size: 12px; color: #8B93A7;">C++ · IMU</span></a>
+<a href="#" class="pcard rm-show" style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 12px; background: #161922; border: 1px solid #262A35; text-decoration: none; color: #E5E7EB; opacity: 0; animation: t-up 0.6s ease 5s forwards;"><span style="font-size: 17px; font-weight: 700; color: #9EF01A;">akilli-sera/</span><span style="font-size: 14px; line-height: 1.6; color: #C4C8D2;">ESP32 tabanlı sera otomasyonu.</span><span style="font-size: 12px; color: #8B93A7;">ESP32 · MQTT</span></a>
+</div>
+</section>
+
+<section class="rm-show" style="display: flex; flex-direction: column; gap: 14px; opacity: 0; animation: t-up 0.6s ease 5.4s forwards;">
+<h2 style="margin: 0; font-size: 20px; color: #FFFFFF;"><span style="color: #9EF01A;">$</span> iletisim --goster</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 8px; background: #9EF01A; color: #0B0C10; text-decoration: none; font-weight: 700;">can@example.com</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 8px; border: 1px solid #2E3340; text-decoration: none;">github.com/kullanici</a>
+</div>
+</section>
+</main>
+<div style="padding: 14px 24px; background: #101218; color: #C4C8D2; font-family: 'Inter', system-ui, sans-serif; font-size: 13px; line-height: 1.5; text-align: center;">rosos örnek tasarımı · Bu sayfadaki kişi, işletme, fiyat ve içerikler uydurmadır; gerçek kişi ve kurumlarla ilgisi yoktur.</div>
+</div>
+</body>
+</html>
