@@ -41,6 +41,7 @@ summary{cursor:pointer}
 <a href="#kimler-icin" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Kimler için</a>
 <a href="#tasarimlar" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Tasarımlar</a>
 <a href="#ornekler" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Örnekler</a>
+<a href="#cv" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">CV</a>
 <a href="#nasil-calisir" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Nasıl çalışır</a>
 <a href="#sss" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">SSS</a>
 <button type="button" onClick="{{openCart}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; box-sizing: border-box; padding: 0 8px 0 16px; border: none; border-radius: 10px; background: #101218; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>Sepet<span style="padding: 4px 10px; border-radius: 999px; background: #DDF56B; color: #101218; font-size: 14px;">{{totalText}}</span></button>
@@ -641,6 +642,65 @@ summary{cursor:pointer}
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
 <a href="ornekler/kartvizit.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
 <button type="button" aria-pressed="{{cards.ornek3.pressed}}" onClick="{{cards.ornek3.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.ornek3.btnBorder}}; background: {{cards.ornek3.btnBg}}; color: {{cards.ornek3.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.ornek3.label}}</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="cv">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">CV hazırlama</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Siten hazırsa CV'n de hazır olsun.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">İki formatta CV hazırlıyoruz. Bilgilerini WhatsApp'tan gönderiyorsun; metinleri toparlayıp PDF ve Word dosyası olarak teslim ediyoruz. İstersen ikisini birlikte alabilirsin. Aşağıdaki örnekler gerçek bir CV'nin iki formattaki halidir.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px;">
+
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.cvnormal.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div style="height: 280px; box-sizing: border-box; overflow: hidden; background: #E9ECF2; padding: 22px 24px 0; display: flex; justify-content: center;">
+<img src="assets/normal-onizleme.jpg" alt="Normal formatta gerçek bir CV örneğinin üst kısmı" style="align-self: flex-start; width: 100%; max-width: 380px; height: auto; border-radius: 4px 4px 0 0; box-shadow: 0 10px 24px rgba(16, 18, 24, 0.14);">
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Normal format <span style="font-weight: 600; color: #4B5162;">· {{cards.cvnormal.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Tasarımlı</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162;">Fotoğraflı, renkli ve göze hoş gelen bir CV. E-postayla gönderim, kariyer fuarı ve elden başvurular için.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1; font-size: 15px;">
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>İki sütunlu, fotoğraflı tasarım</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Renk ve yazı tipi seçimi</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>PDF ve düzenlenebilir dosya</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>1–2 iş gününde teslim</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="cv/normal.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Örneği gör</a>
+<button type="button" aria-pressed="{{cards.cvnormal.pressed}}" onClick="{{cards.cvnormal.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.cvnormal.btnBorder}}; background: {{cards.cvnormal.btnBg}}; color: {{cards.cvnormal.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.cvnormal.label}}</button>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border: 2px solid {{cards.cvats.border}}; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div style="height: 280px; box-sizing: border-box; overflow: hidden; background: #E9ECF2; padding: 22px 24px 0; display: flex; justify-content: center;">
+<img src="assets/ats-onizleme.jpg" alt="ATS formatında gerçek bir CV örneğinin üst kısmı" style="align-self: flex-start; width: 100%; max-width: 380px; height: auto; border-radius: 4px 4px 0 0; box-shadow: 0 10px 24px rgba(16, 18, 24, 0.14);">
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">ATS formatı <span style="font-weight: 600; color: #4B5162;">· {{cards.cvats.price}}</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Otomatik taramaya uygun</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162;">Şirketlerin CV tarama sistemlerinden (ATS) sorunsuz geçen sade, tek sütunlu CV. Online iş başvuruları için.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1; font-size: 15px;">
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Tek sütun, tarama sistemlerinin okuyabildiği düzen</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>İş ilanına uygun anahtar kelimeler</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Ölçülebilir, güçlü başarı maddeleri</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>PDF ve Word dosyası, 2 iş gününde teslim</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="cv/ats.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Örneği gör</a>
+<button type="button" aria-pressed="{{cards.cvats.pressed}}" onClick="{{cards.cvats.pick}}" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid {{cards.cvats.btnBorder}}; background: {{cards.cvats.btnBg}}; color: {{cards.cvats.btnColor}}; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">{{cards.cvats.label}}</button>
 </div>
 </div>
 </div>

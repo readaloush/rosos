@@ -30,10 +30,12 @@ class Component extends DCLogic {
       ['firin', 'Fırın', ['isletme'], 'anim'],
       ['ornek1', 'readaloush.com benzeri', [], 'ornek'],
       ['ornek2', 'Mühendis portföyü benzeri', [], 'ornek'],
-      ['ornek3', 'Dijital kartvizit benzeri', [], 'ornek']
+      ['ornek3', 'Dijital kartvizit benzeri', [], 'ornek'],
+      ['cvnormal', 'CV · Normal format', [], 'cv'],
+      ['cvats', 'CV · ATS formatı', [], 'cv']
     ];
     const fmt = (v) => '₺' + v.toLocaleString('tr-TR');
-    const PRICE = { sade: 1500, akademik: 1750, gece: 2000, renkli: 2500, galeri: 2500, kurumsal: 3500, lezzet: 3500, randevu: 4000, terminal: 3000, yorunge: 3000, serit: 3500, slayt: 3500, sahne: 5000, firin: 5000, ornek1: 4000, ornek2: 4500, ornek3: 1250 };
+    const PRICE = { sade: 1500, akademik: 1750, gece: 2000, renkli: 2500, galeri: 2500, kurumsal: 3500, lezzet: 3500, randevu: 4000, terminal: 3000, yorunge: 3000, serit: 3500, slayt: 3500, sahne: 5000, firin: 5000, ornek1: 4000, ornek2: 4500, ornek3: 1250, cvnormal: 100, cvats: 250 };
     const cards = {};
     const names = {};
     list.forEach(([id, label, tags, k]) => {
@@ -81,7 +83,9 @@ class Component extends DCLogic {
       toggle: () => this.setState({ [key]: !on })
     });
     const n = sel.length;
-    const siteN = Math.max(1, n);
+    const siteSel = sel.filter((id) => kinds[id] !== 'cv');
+    const cvSel = sel.filter((id) => kinds[id] === 'cv');
+    const siteN = Math.max(1, siteSel.length);
     const siteTag = siteN > 1 ? ' × ' + siteN + ' site' : '';
     const designSum = sel.reduce((a, id) => a + PRICE[id], 0);
     const ingPrice = st.ingilizce ? 750 * siteN : 0;
@@ -89,7 +93,7 @@ class Component extends DCLogic {
     const total = designSum + ingPrice + pages * 400;
     const lines = [];
     sel.forEach((id) => {
-      lines.push({ label: (kinds[id] === 'ornek' ? 'Örnek · ' : 'Tasarım · ') + names[id], sub: kinds[id] === 'anim' ? 'Animasyonlu · tek seferlik' : (kinds[id] === 'ornek' ? 'Gerçek örneğe benzer · tek seferlik' : 'Tek seferlik'), amount: fmt(PRICE[id]), removeLabel: names[id] + ' tasarımını sepetten çıkar', remove: () => this.setState({ selected: sel.filter((x) => x !== id) }) });
+      lines.push({ label: (kinds[id] === 'ornek' ? 'Örnek · ' : (kinds[id] === 'cv' ? '' : 'Tasarım · ')) + names[id], sub: kinds[id] === 'anim' ? 'Animasyonlu · tek seferlik' : (kinds[id] === 'ornek' ? 'Gerçek örneğe benzer · tek seferlik' : (kinds[id] === 'cv' ? 'PDF ve Word · tek seferlik' : 'Tek seferlik')), amount: fmt(PRICE[id]), removeLabel: names[id] + ' tasarımını sepetten çıkar', remove: () => this.setState({ selected: sel.filter((x) => x !== id) }) });
     });
     if (st.ingilizce) lines.push({ label: 'İngilizce sürüm' + siteTag, sub: fmt(750) + ' / site · tek seferlik', amount: fmt(ingPrice), removeLabel: 'İngilizce sürümü çıkar', remove: () => this.setState({ ingilizce: false }) });
     if (pages > 0) lines.push({ label: 'Ek sayfa × ' + pages, sub: fmt(400) + ' / sayfa', amount: fmt(pages * 400), removeLabel: 'Ek sayfaları çıkar', remove: () => this.setState({ pages: 0 }) });
@@ -106,11 +110,16 @@ class Component extends DCLogic {
       'Merhaba! rosos üzerinden sipariş vermek istiyorum.',
       '',
       'Sipariş no: ' + orderNo,
-      'Ad soyad: ' + name.trim(),
-      '',
-      'Tasarımlar (' + n + ' site):'
+      'Ad soyad: ' + name.trim()
     ];
-    sel.forEach((id, i) => msg.push((i + 1) + '. ' + names[id] + ' — ' + fmt(PRICE[id])));
+    if (siteSel.length) {
+      msg.push('', 'Siteler (' + siteSel.length + '):');
+      siteSel.forEach((id, i) => msg.push((i + 1) + '. ' + names[id] + ' — ' + fmt(PRICE[id])));
+    }
+    if (cvSel.length) {
+      msg.push('', 'CV:');
+      cvSel.forEach((id) => msg.push('- ' + names[id].replace('CV · ', '') + ' — ' + fmt(PRICE[id])));
+    }
     if (st.ingilizce || pages > 0 || st.bakim) msg.push('', 'Ek hizmetler:');
     if (st.ingilizce) msg.push('- İngilizce sürüm' + siteTag + ': ' + fmt(ingPrice));
     if (pages > 0) msg.push('- Ek sayfa x' + pages + ': ' + fmt(pages * 400));
@@ -134,7 +143,7 @@ class Component extends DCLogic {
       f: { all: chip('all'), ogrenci: chip('ogrenci'), freelancer: chip('freelancer'), isletme: chip('isletme') },
       hasSelected: n > 0,
       noSelected: n === 0,
-      selectedName: n > 1 ? n + ' site (' + sel.map((id) => names[id].replace(' (animasyonlu)', '')).join(', ') + ')' : (n === 1 ? names[sel[0]] : ''),
+      selectedName: n > 1 ? n + ' ürün (' + sel.map((id) => names[id].replace(' (animasyonlu)', '')).join(', ') + ')' : (n === 1 ? names[sel[0]] : ''),
       selectedPrice: fmt(designSum),
       monthlyText: fmt(monthly) + '/ay',
       x: { bakim: xBtn('bakim', !!st.bakim), ingilizce: xBtn('ingilizce', !!st.ingilizce) },
