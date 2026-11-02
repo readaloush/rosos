@@ -3,10 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <title>rosos — Web sitesi hizmeti</title>
 <meta name="description" content="rosos: öğrenciler, freelancer'lar ve küçük işletmeler için hazır, hızlı ve uygun fiyatlı web siteleri.">
 <meta property="og:title" content="rosos — Web sitesi hizmeti">
 <meta property="og:description" content="rosos: öğrenciler, freelancer'lar ve küçük işletmeler için hazır, hızlı ve uygun fiyatlı web siteleri.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://readaloush.github.io/rosos/">
+<meta property="og:image" content="https://readaloush.github.io/rosos/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap">
 <style>
 body{margin:0}
@@ -22,10 +30,635 @@ summary{cursor:pointer}
 @keyframes vt-steam{0%{opacity:0;transform:translateY(0)}40%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
 @keyframes vt-float{50%{transform:translateY(-8px)}}
 @media (prefers-reduced-motion: reduce){*{animation:none !important}}
+@media (max-width: 720px){.nav-link{display:none}}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:84px}
 </style>
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #101218; background: #FFFFFF;">
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E4EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #101218;">
+<span style="width: 34px; height: 34px; border-radius: 9px; background: #2B44FF; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2-3 3.5-7 5-7s.5 6 2.5 6 3-5 4.5-5 .5 4 2.5 4 2-1 3-2"></path><path d="M4 20h16"></path></svg>
+</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 23px; letter-spacing: -0.01em;">rosos</span>
+</a>
+<nav aria-label="Ana menü" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;">
+<a class="nav-link" href="#kimler-icin" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Kimler için</a>
+<a class="nav-link" href="#tasarimlar" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Tasarımlar</a>
+<a class="nav-link" href="#ornekler" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Örnekler</a>
+<a class="nav-link" href="#cv" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">CV</a>
+<a class="nav-link" href="#nasil-calisir" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Nasıl çalışır</a>
+<a class="nav-link" href="#sss" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">SSS</a>
+<button type="button" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; box-sizing: border-box; padding: 0 16px; border: none; border-radius: 10px; background: #101218; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>Sepet</button>
+</nav>
+</div>
+</header>
+
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+<span style="align-self: flex-start; background: #DDF56B; color: #101218; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px;">Öğrenciler · Freelancer'lar · Küçük işletmeler</span>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 68px); line-height: 1.05; letter-spacing: -0.02em;">Kendini anlatan bir web siten olsun.</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4B5162; max-width: 520px;">Portföyün, hizmetlerin ya da işletmen birkaç gün içinde yayında. Sen bilgilerini gönder; tasarımı, kurulumu ve yayına almayı biz yapalım.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<a href="#tasarimlar" style="display: inline-flex; align-items: center; min-height: 52px; box-sizing: border-box; padding: 0 26px; border-radius: 12px; background: #2B44FF; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600;">Tasarımları gör</a>
+<a href="https://wa.me/905526767983" style="display: inline-flex; align-items: center; min-height: 52px; box-sizing: border-box; padding: 0 26px; border-radius: 12px; border: 1px solid #C9CCD6; color: #101218; text-decoration: none; font-size: 16px; font-weight: 600;">WhatsApp'tan yaz</a>
+</div>
+<p style="margin: 0; font-size: 14px; color: #5A6072;">Mobil uyumlu · Kendi alan adınla · Teslimden sonra destek</p>
+</div>
+
+<div style="flex: 1 1 440px; min-width: 0;">
+<div aria-hidden="true" style="border: 1px solid #E2E4EA; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 24px 60px rgba(16, 18, 24, 0.12);">
+<div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F4F7; border-bottom: 1px solid #E2E4EA;">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D5D8E0;"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D5D8E0;"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D5D8E0;"></span>
+<div style="margin-left: 12px; flex: 1; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 8px; padding: 6px 12px; font-size: 13px; color: #5A6072;">senin-adin.com</div>
+</div>
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #DDF56B; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">D</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">Deniz</div>
+<div style="font-size: 14px; color: #5A6072;">Bilgisayar Mühendisliği öğrencisi · Gömülü sistemler</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="padding: 6px 12px; border-radius: 999px; background: #2B44FF; color: #FFFFFF; font-size: 13px; font-weight: 600;">Projeler</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3F4F7; color: #101218; font-size: 13px; font-weight: 500;">Hakkımda</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3F4F7; color: #101218; font-size: 13px; font-weight: 500;">CV</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3F4F7; color: #101218; font-size: 13px; font-weight: 500;">İletişim</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+<div style="border: 1px solid #E2E4EA; border-radius: 12px; overflow: hidden;">
+<div style="height: 96px; background: #E6E9FF;"></div>
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 14px; font-weight: 600;">Çizgi izleyen robot</div>
+<div style="font-size: 12px; color: #5A6072;">STM32 · C</div>
+</div>
+</div>
+<div style="border: 1px solid #E2E4EA; border-radius: 12px; overflow: hidden;">
+<div style="height: 96px; background: #EEF9C8;"></div>
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 14px; font-weight: 600;">Hava durumu uygulaması</div>
+<div style="font-size: 12px; color: #5A6072;">Python · API</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="kimler-icin" style="background: #F3F4F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Kimler için</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Herkesin ihtiyacı farklı, sitesi de farklı olmalı.</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+<div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDF56B; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Öğrenciler ve yeni mezunlar</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Staj ve iş başvurularında CV'nin yanına bir link ekle. Projelerini, GitHub'ını ve sertifikalarını tek yerde göster.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Projelerin ve teknik becerilerin</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>İndirilebilir CV</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>LinkedIn ve GitHub bağlantıları</li>
+</ul>
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDF56B; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 13h18"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Freelancer'lar</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Müşteriye "işlerime Instagram'dan bak" demek yerine kendi siteni gönder. Hizmetlerin, işlerin ve referansların bir arada.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Hizmetler ve iş örnekleri galerisi</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Müşteri yorumları bölümü</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Teklif ve iletişim formu</li>
+</ul>
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDF56B; display: flex; align-items: center; justify-content: center;">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#101218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 5 4h14l2 6Z"></path><path d="M4 10v10h16V10"></path><path d="M10 20v-5h4v5"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Küçük işletmeler</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Kafe, kuaför, atölye ya da ofis… Müşterilerin seni Google'da aradığında düzgün bir siteyle karşılaşsın.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Hizmet, menü ve fiyat listesi</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Harita, adres ve çalışma saatleri</li>
+<li style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M5 12l5 5 9-10"></path></svg>Tek tıkla WhatsApp butonu</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="tasarimlar">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Tasarımlar</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Beğendiğin tasarımı seç, gerisini biz uyarlayalım.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Normal ya da animasyonlu, 14 tasarımın hepsini canlı olarak açıp gezebilirsin. Her tasarım senin bilgilerin, renklerin ve fotoğraflarınla hazırlanır. Birden fazla siten mi olacak? İstediğin kadar tasarımı sepete ekleyebilirsin.</p>
+<p style="margin: 0; padding: 12px 16px; border-radius: 12px; border: 1px dashed #C9CCD6; font-size: 15px; line-height: 1.5; color: #4B5162;"><strong style="color: #101218;">Not:</strong> Canlı önizlemeler tarzı göstermek için hazırlanmış kısa örneklerdir; içlerindeki kişi, işletme ve fiyatlar uydurmadır. Sipariş verdiğinde siten senin içeriklerinle, daha fazla bölüm ve sayfayla tam olarak hazırlanır.</p>
+</div>
+
+<div role="group" aria-label="Tasarım türü" style="align-self: flex-start; display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 14px; background: #F3F4F7;">
+<button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 20px; border: none; border-radius: 10px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(16, 18, 24, 0.18); color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Normal tasarımlar · 8</button>
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border: none; border-radius: 10px; background: transparent; box-shadow: none; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Animasyonlu tasarımlar · 6</button>
+</div>
+
+
+
+<div role="group" aria-label="Tasarımları filtrele" style="display: flex; flex-wrap: wrap; gap: 8px;">
+<button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #101218; background: #101218; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Hepsi</button>
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #C9CCD6; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Öğrenciler</button>
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #C9CCD6; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Freelancer'lar</button>
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #C9CCD6; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">İşletmeler</button>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #E2E4EA; padding: 28px 32px; display: flex; flex-direction: column; gap: 10px;">
+<div style="font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 700; color: #101218;">Deniz</div>
+<div style="font-size: 12px; color: #5A6072;">Bilgisayar Mühendisliği öğrencisi</div>
+<div style="height: 1px; background: #101218; margin: 6px 0;"></div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #101218;"><span>Çizgi izleyen robot</span><span style="color: #5A6072;">2026</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #101218;"><span>Görüntü sınıflandırma</span><span style="color: #5A6072;">2025</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #101218;"><span>Yazılım stajı</span><span style="color: #5A6072;">2025</span></div>
+<div style="display: flex; gap: 14px; margin-top: 6px; font-size: 12px; font-weight: 600; color: #101218; text-decoration: underline;"><span>CV indir</span><span>GitHub</span><span>LinkedIn</span></div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Sade <span style="font-weight: 600; color: #4B5162;">· ₺1.500</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Beyaz zemin, sade yazılar. CV'sini ve projelerini öne çıkarmak isteyen öğrenciler ve akademisyenler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/sade.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #0D0F14; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; font-family: ui-monospace, 'SF Mono', Menlo, monospace;">
+<div style="font-size: 12px; color: #8B93A7;">~/portfolio</div>
+<div style="font-size: 20px; font-weight: 700; color: #9EF01A;">&gt; merhaba, ben Can</div>
+<div style="font-size: 12px; color: #C4C8D2;">Gömülü yazılım geliştirici</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px;">
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">C</span>
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">Python</span>
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">STM32</span>
+<span style="font-size: 11px; color: #C4C8D2; border: 1px solid #2E3340; border-radius: 6px; padding: 3px 8px;">Linux</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+<div style="background: #1A1D26; border-radius: 8px; padding: 12px; font-size: 11px; color: #E5E7EB;">motor-kontrol/</div>
+<div style="background: #1A1D26; border-radius: 8px; padding: 12px; font-size: 11px; color: #E5E7EB;">sensor-fuzyonu/</div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Gece <span style="font-weight: 600; color: #4B5162;">· ₺2.000</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci · Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Koyu tema, kod havası. Yazılımcılar, mühendislik öğrencileri ve teknik işler yapan freelancer'lar için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/gece.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFE14D; position: relative; padding: 28px;">
+<div style="position: absolute; right: -30px; top: -30px; width: 150px; height: 150px; border-radius: 50%; background: #FF6B35;"></div>
+<div style="position: absolute; right: 60px; bottom: -24px; width: 110px; height: 110px; background: #2B44FF; transform: rotate(12deg);"></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; max-width: 230px;">
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; line-height: 1.02; color: #101218;">Merhaba, ben Ece.</div>
+<div style="font-size: 13px; font-weight: 500; color: #101218;">Grafik tasarım · İllüstrasyon</div>
+<span style="align-self: flex-start; margin-top: 6px; background: #101218; color: #FFE14D; font-size: 12px; font-weight: 600; padding: 8px 14px; border-radius: 999px;">İşlerime bak</span>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Renkli <span style="font-weight: 600; color: #4B5162;">· ₺2.500</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Canlı renkler, büyük yazılar. Tasarımcılar ve içerik üreticileri gibi akılda kalmak isteyenler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/renkli.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #111318; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #E5E7EB;"><span style="font-weight: 700; letter-spacing: 0.12em;">ARDA</span><span style="color: #A3A8B3;">Fotoğraf</span></div>
+<div style="flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 6px;">
+<div style="background: #3A3F4B; border-radius: 4px;"></div>
+<div style="background: #8B919C; border-radius: 4px;"></div>
+<div style="background: #565C68; border-radius: 4px;"></div>
+<div style="background: #A3A8B3; border-radius: 4px;"></div>
+<div style="background: #2F3540; border-radius: 4px;"></div>
+<div style="background: #6B7280; border-radius: 4px;"></div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Galeri <span style="font-weight: 600; color: #4B5162;">· ₺2.500</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Fotoğraflar ön planda, yazı az. Fotoğrafçılar, mimarlar ve işini görselle anlatanlar için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/galeri.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #F5F7FA; display: flex; flex-direction: column;">
+<div style="background: #13294B; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px;"><span style="color: #FFFFFF; font-size: 13px; font-weight: 700;">Örnek Danışmanlık</span><span style="display: flex; gap: 10px; font-size: 11px; color: #C9D3E3;"><span>Hizmetler</span><span>Hakkımızda</span><span>İletişim</span></span></div>
+<div style="padding: 22px 20px; display: flex; flex-direction: column; gap: 16px;">
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #13294B; line-height: 1.15;">Doğru karar,<br>doğru zamanda.</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+<div style="background: #FFFFFF; border: 1px solid #DDE3EC; border-radius: 8px; padding: 12px 10px; font-size: 11px; font-weight: 600; color: #13294B;">Muhasebe</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EC; border-radius: 8px; padding: 12px 10px; font-size: 11px; font-weight: 600; color: #13294B;">Vergi</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EC; border-radius: 8px; padding: 12px 10px; font-size: 11px; font-weight: 600; color: #13294B;">Danışmanlık</div>
+</div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Kurumsal <span style="font-weight: 600; color: #4B5162;">· ₺3.500</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Freelancer · İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Lacivert tonlar, düzenli yapı. Danışmanlar, ofisler ve güven vermek isteyen işletmeler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/kurumsal.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #F6EFE6; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><span style="font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #5B3A1E;">Örnek Kafe</span><span style="font-size: 11px; color: #6B4E33;">Açık · 08:00–22:00</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #3B2A1A;"><span>Türk kahvesi</span><span style="flex: 1; border-bottom: 1px dotted #B79E84;"></span><span>₺60</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #3B2A1A;"><span>Mercimek çorbası</span><span style="flex: 1; border-bottom: 1px dotted #B79E84;"></span><span>₺90</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #3B2A1A;"><span>Ev yapımı kek</span><span style="flex: 1; border-bottom: 1px dotted #B79E84;"></span><span>₺75</span></div>
+<div style="display: flex; gap: 8px; margin-top: 8px;">
+<span style="background: #B4532A; color: #FFFFFF; font-size: 12px; font-weight: 600; padding: 8px 14px; border-radius: 999px;">Yol tarifi al</span>
+<span style="border: 1px solid #B4532A; color: #8A3D1E; font-size: 12px; font-weight: 600; padding: 7px 14px; border-radius: 999px;">WhatsApp</span>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Lezzet <span style="font-weight: 600; color: #4B5162;">· ₺3.500</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Sıcak tonlar, menü ve çalışma saatleri öne çıkar. Kafe, restoran ve pastaneler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/lezzet.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #E2E4EA; padding: 26px 30px; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #1F4D3A;">Ad Soyad</div>
+<div style="font-size: 12px; color: #5A6072;">Araştırma Görevlisi · Makine Öğrenmesi</div>
+<div style="margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #1F4D3A;">YAYINLAR</div>
+<div style="font-size: 12px; line-height: 1.45; color: #101218;">Görüntü tabanlı bitki hastalığı tespiti <span style="color: #5A6072;">· 2025</span></div>
+<div style="font-size: 12px; line-height: 1.45; color: #101218;">Az veriyle transfer öğrenme <span style="color: #5A6072;">· 2024</span></div>
+<div style="display: flex; gap: 14px; margin-top: 6px; font-size: 12px; font-weight: 600; color: #1F4D3A; text-decoration: underline;"><span>Google Scholar</span><span>ORCID</span><span>CV</span></div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Akademik <span style="font-weight: 600; color: #4B5162;">· ₺1.750</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Öğrenci · Akademisyen</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Yayınlar, dersler ve araştırma alanları düzenli bir yapıda. Yüksek lisans öğrencileri ve akademisyenler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/akademik.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 240px; box-sizing: border-box; overflow: hidden; background: #FFF6F9; border-bottom: 1px solid #E2E4EA; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;"><span style="font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: 700; color: #7A1F4E;">Örnek Güzellik</span><span style="background: #7A1F4E; color: #FFFFFF; font-size: 12px; font-weight: 600; padding: 7px 12px; border-radius: 999px;">Randevu al</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1D5E1; font-size: 13px; color: #3A1028;"><span>Saç kesimi · 45 dk</span><span>₺400</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1D5E1; font-size: 13px; color: #3A1028;"><span>Fön · 30 dk</span><span>₺250</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1D5E1; font-size: 13px; color: #3A1028;"><span>Manikür · 40 dk</span><span>₺300</span></div>
+<div style="font-size: 11px; color: #6B3A52;">Pzt–Cmt · 10:00–20:00</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Randevu <span style="font-weight: 600; color: #4B5162;">· ₺4.000</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">İşletme</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Hizmetler, süreler ve fiyatlar net; randevu butonu hep görünür. Kuaför, güzellik salonu ve klinikler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="demolar/randevu.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; padding: 26px 28px; border-radius: 18px; background: #EEF9C8;">
+<div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 420px; min-width: 0;">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #101218;">Kendinize özel bir tasarım mı istiyorsunuz?</span>
+<span style="font-size: 16px; line-height: 1.6; color: #2E3608;">Yapabiliriz! Aklınızdaki siteyi WhatsApp üzerinden anlatın; beğendiğiniz sitelerin linklerini de gönderebilirsiniz. Fiyatı birlikte belirleriz.</span>
+</div>
+<a href="https://wa.me/905526767983?text=Merhaba%2C%20kendime%20%C3%B6zel%20bir%20tasar%C4%B1m%20istiyorum.%20Detaylar%3A%20" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 12px; background: #101218; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2L4 20Z"></path></svg>WhatsApp'tan anlatın</a>
+</div>
+</div>
+</section>
+
+<section id="ornekler" style="background: #F3F4F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Örnekler</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Gerçek, yayında olan siteler.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Bu üç site rosos'un kurucusuna ait; hazır tasarımlardan daha kapsamlı oldukları için ayrı fiyatlandırılırlar. Benzerini istiyorsan doğrudan sepete ekleyebilirsin, site senin içeriklerinle yeniden hazırlanır.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 200px; box-sizing: border-box; overflow: hidden; background: #000000; padding: 26px 28px; display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+<span style="font-size: 11px; letter-spacing: 0.08em; color: #8B93A7;">COMPUTER VISION · EMBEDDED AI · AUTONOMOUS SYSTEMS</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #FFFFFF;">Read Aloush</span>
+<span style="font-size: 13px; color: #C4C8D2;">AI &amp; Robotics Engineer</span>
+<div style="display: flex; gap: 8px; margin-top: 6px;"><span style="font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; color: #000000;">See the work</span><span style="font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 999px; border: 1px solid #3A3F4B; color: #FFFFFF;">Book a meeting</span></div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700;">readaloush.com <span style="font-weight: 600; color: #4B5162;">· ₺4.000</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Kişisel portföy</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Bu siteye benzer bir kişisel portföy; senin bilgilerin ve projelerinle hazırlanır.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="https://readaloush.com" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Siteyi gör</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 200px; box-sizing: border-box; overflow: hidden; background: #0B0C10; padding: 24px 26px; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; line-height: 1.05; color: #FFFFFF;">Yapay zekâ ve robotik mühendisi.</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+<div style="padding: 10px; border-radius: 10px; background: #14161D; display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #DDF56B;">%97,69</span><span style="font-size: 10px; color: #C4C8D2;">atık ayrıştırma</span></div>
+<div style="padding: 10px; border-radius: 10px; background: #14161D; display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #DDF56B;">%98,43</span><span style="font-size: 10px; color: #C4C8D2;">MRI analizi</span></div>
+<div style="padding: 10px; border-radius: 10px; background: #14161D; display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #DDF56B;">2209-A</span><span style="font-size: 10px; color: #C4C8D2;">TÜBİTAK İHA</span></div>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700;">Mühendis portföyü <span style="font-weight: 600; color: #4B5162;">· ₺4.500</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Read Aloush</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Projeler, başarı rakamları, deneyim ve yeteneklerle uzun bir portföy. İş ve staj arayan mühendisler için.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="ornekler/muhendis.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div aria-hidden="true" style="height: 200px; box-sizing: border-box; overflow: hidden; background: #EEF1FF; display: flex; align-items: center; justify-content: center;">
+<div style="width: 190px; background: #FFFFFF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; box-shadow: 0 10px 24px rgba(43, 68, 255, 0.12);">
+<div style="width: 40px; height: 40px; border-radius: 50%; background: #101218; color: #DDF56B; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700;">RA</div>
+<span style="font-size: 13px; font-weight: 700; color: #101218;">Read Aloush</span>
+<span style="width: 100%; padding: 6px 0; border-radius: 8px; background: #101218; color: #FFFFFF; font-size: 10px; font-weight: 600; text-align: center;">WhatsApp'tan yaz</span>
+<span style="width: 100%; padding: 6px 0; border-radius: 8px; background: #F3F4F7; color: #101218; font-size: 10px; font-weight: 600; text-align: center;">CV'mi indir</span>
+<span style="width: 100%; padding: 6px 0; border-radius: 8px; background: #F3F4F7; color: #101218; font-size: 10px; font-weight: 600; text-align: center;">Projelerim</span>
+</div>
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700;">Dijital kartvizit <span style="font-weight: 600; color: #4B5162;">· ₺1.250</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Read Aloush</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162; flex: 1;">Telefona göre tasarlanmış tek kart: fotoğraf, kısa tanıtım ve tüm bağlantılar. Instagram biyografisine ya da QR koda koymak için ideal.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="ornekler/kartvizit.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Canlı önizle</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="cv">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">CV hazırlama</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Siten hazırsa CV'n de hazır olsun.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">İki formatta CV hazırlıyoruz. Bilgilerini WhatsApp'tan gönderiyorsun; metinleri toparlayıp PDF ve Word dosyası olarak teslim ediyoruz. İstersen ikisini birlikte alabilirsin. Aşağıdaki örnekler gerçek bir CV'nin iki formattaki halidir.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px;">
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div style="height: 280px; box-sizing: border-box; overflow: hidden; background: #E9ECF2; padding: 22px 24px 0; display: flex; justify-content: center;">
+<img src="assets/normal-onizleme.jpg" alt="Normal formatta gerçek bir CV örneğinin üst kısmı" style="align-self: flex-start; width: 100%; max-width: 380px; height: auto; border-radius: 4px 4px 0 0; box-shadow: 0 10px 24px rgba(16, 18, 24, 0.14);">
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">Normal format <span style="font-weight: 600; color: #4B5162;">· ₺300</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Tasarımlı</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162;">Fotoğraflı, renkli ve göze hoş gelen bir CV. E-postayla gönderim, kariyer fuarı ve elden başvurular için.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1; font-size: 15px;">
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>İki sütunlu, fotoğraflı tasarım</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Renk ve yazı tipi seçimi</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>PDF ve düzenlenebilir dosya</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>1–2 iş gününde teslim</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="cv/normal.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Örneği gör</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border: 2px solid #E2E4EA; border-radius: 18px; overflow: hidden; background: #FFFFFF;">
+<div style="height: 280px; box-sizing: border-box; overflow: hidden; background: #E9ECF2; padding: 22px 24px 0; display: flex; justify-content: center;">
+<img src="assets/ats-onizleme.jpg" alt="ATS formatında gerçek bir CV örneğinin üst kısmı" style="align-self: flex-start; width: 100%; max-width: 380px; height: auto; border-radius: 4px 4px 0 0; box-shadow: 0 10px 24px rgba(16, 18, 24, 0.14);">
+</div>
+<div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;">ATS formatı <span style="font-weight: 600; color: #4B5162;">· ₺250</span></h3>
+<span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: #F3F4F7; color: #101218;">Otomatik taramaya uygun</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4B5162;">Şirketlerin CV tarama sistemlerinden (ATS) sorunsuz geçen sade, tek sütunlu CV. Online iş başvuruları için.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1; font-size: 15px;">
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Tek sütun, tarama sistemlerinin okuyabildiği düzen</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>İş ilanına uygun anahtar kelimeler</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>Ölçülebilir, güçlü başarı maddeleri</li>
+<li style="display: flex; gap: 10px; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B44FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12l5 5 9-10"></path></svg>PDF ve Word dosyası, 2 iş gününde teslim</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="cv/ats.html" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #F3F4F7; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">Örneği gör</a>
+<button type="button" aria-pressed="false" style="flex: 1 1 120px; min-height: 48px; border-radius: 12px; border: 1px solid #101218; background: #FFFFFF; color: #101218; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;">Sepete ekle</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="kim-yapiyor">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+<div style="flex: 0 0 auto; width: 120px; height: 120px; border-radius: 50%; background: #101218; color: #DDF56B; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 40px;">RA</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Kim yapıyor</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Karşında bir ajans değil, bir mühendis var.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">rosos'u Konya'dan Read Aloush yürütüyor. Mekatronik mühendisi; gömülü yazılım mühendisi olarak çalışıyor ve yukarıdaki örnek siteleri de kendisi yaptı. Siparişini baştan sona aynı kişiyle konuşursun: tasarım, kurulum ve teslimden sonraki destek dahil.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px;">
+<a href="https://readaloush.com" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 0 22px; border-radius: 12px; border: 1px solid #C9CCD6; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">readaloush.com</a>
+<a href="https://wa.me/905526767983" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 0 22px; border-radius: 12px; border: 1px solid #C9CCD6; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">WhatsApp'tan yaz</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="nasil-calisir" style="background: #101218; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #B9BDC9;">Nasıl çalışır</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Dört adımda yayındasın.</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">1</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Tasarımını seç</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Beğendiğin tasarımı canlı incele, sepete ekle. İstersen ek hizmet de ekle.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">2</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Sepetini onayla</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Siparişin, numarasıyla birlikte WhatsApp'tan bize ulaşır. Ödeme bilgilerini oradan paylaşırız.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">3</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Taslağı incele</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Birkaç gün içinde taslağı görürsün, değişiklik isteklerini iletirsin.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #1B1E27;">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #DDF56B; color: #101218; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">4</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700;">Yayına al</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C4C8D2;">Siten kendi alan adınla yayında. Sonrasında da yanındayız.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sss" style="background: #F3F4F7;">
+<div style="max-width: 860px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px;">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Sık sorulan sorular</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Aklına takılanlar</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Siteyi ne kadar sürede teslim ediyorsunuz?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Tasarıma göre 3–7 iş günü. Süre, içeriklerini (yazı, fotoğraf, proje bilgileri) gönderdiğin gün başlar.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Önizlemeler neden kısa?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Önizlemeler her tasarımın tarzını ve hissini göstermek için hazırlanmış kısa örneklerdir. Teslim edilen sitede senin bilgilerin, fotoğrafların ve ihtiyacın olan tüm bölümler ve sayfalar yer alır.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Alan adı ve barındırma kimin adına olacak?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Senin. Hesaplar senin adına açılır, site tamamen sana ait olur. Yıllık alan adı ve barındırma ücretlerini sağlayıcıya sen ödersin.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Teslimden sonra değişiklik yapabilir miyim?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Revizyon hakların teslimden önce kullanılır. Sonrası için aylık bakım paketi alabilir ya da tek seferlik değişiklik isteyebilirsin.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Yazıları ben mi hazırlamalıyım?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Temel bilgileri sen verirsin; metinleri düzenleyip toparlamana biz yardım ederiz.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 14px; padding: 20px 24px;">
+<summary style="font-size: 17px; font-weight: 600; min-height: 28px;">Ödemeyi nasıl yapıyorum?</summary>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4B5162;">Sepetinde "Ödeme yap"a bastığında siparişin WhatsApp'tan bize ulaşır, ödeme bilgilerini oradan paylaşırız. Yarısı işe başlarken, yarısı teslimde ödenir.</p>
+</details>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #E2E4EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; color: #5A6072;">
+<span>© 2026 rosos</span>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+<a href="#tasarimlar" style="color: #5A6072; text-decoration: none;">Tasarımlar</a>
+<a href="#sss" style="color: #5A6072; text-decoration: none;">SSS</a>
+<a href="https://wa.me/905526767983" style="color: #5A6072; text-decoration: none;">WhatsApp: +90 552 676 79 83</a>
+</div>
+</div>
+</footer>
+
+
+
+
+
+</div>
+</div>
 <template id="sayfa">
 <div style="font-family: 'Inter', system-ui, sans-serif; color: #101218; background: #FFFFFF;">
 
@@ -38,13 +671,13 @@ summary{cursor:pointer}
 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 23px; letter-spacing: -0.01em;">rosos</span>
 </a>
 <nav aria-label="Ana menü" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;">
-<a href="#kimler-icin" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Kimler için</a>
-<a href="#tasarimlar" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Tasarımlar</a>
-<a href="#ornekler" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Örnekler</a>
-<a href="#cv" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">CV</a>
-<a href="#nasil-calisir" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Nasıl çalışır</a>
-<a href="#sss" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">SSS</a>
-<button type="button" onClick="{{openCart}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; box-sizing: border-box; padding: 0 8px 0 16px; border: none; border-radius: 10px; background: #101218; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>Sepet<span style="padding: 4px 10px; border-radius: 999px; background: #DDF56B; color: #101218; font-size: 14px;">{{totalText}}</span></button>
+<a class="nav-link" href="#kimler-icin" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Kimler için</a>
+<a class="nav-link" href="#tasarimlar" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Tasarımlar</a>
+<a class="nav-link" href="#ornekler" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Örnekler</a>
+<a class="nav-link" href="#cv" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">CV</a>
+<a class="nav-link" href="#nasil-calisir" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">Nasıl çalışır</a>
+<a class="nav-link" href="#sss" style="color: #4B5162; text-decoration: none; font-size: 15px; font-weight: 500;">SSS</a>
+<button type="button" onClick="{{openCart}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; box-sizing: border-box; padding: 0 16px; border: none; border-radius: 10px; background: #101218; color: #FFFFFF; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>Sepet<sc-if value="{{hasItems}}"><span style="padding: 4px 10px; border-radius: 999px; background: #DDF56B; color: #101218; font-size: 14px;">{{totalText}}</span></sc-if></button>
 </nav>
 </div>
 </header>
@@ -576,8 +1209,8 @@ summary{cursor:pointer}
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px;">
 <div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
 <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Örnekler</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Yaptığımız gerçek sitelerden bazıları.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Bunlardan birine benzer bir site istiyorsan doğrudan sepete ekleyebilirsin. Site senin içeriklerinle yeniden hazırlanır; gerçek işlere dayandıkları için fiyatları hazır tasarımlardan farklıdır.</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Gerçek, yayında olan siteler.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">Bu üç site rosos'un kurucusuna ait; hazır tasarımlardan daha kapsamlı oldukları için ayrı fiyatlandırılırlar. Benzerini istiyorsan doğrudan sepete ekleyebilirsin, site senin içeriklerinle yeniden hazırlanır.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
 
@@ -705,6 +1338,21 @@ summary{cursor:pointer}
 </div>
 </div>
 
+</div>
+</div>
+</section>
+
+<section id="kim-yapiyor">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+<div style="flex: 0 0 auto; width: 120px; height: 120px; border-radius: 50%; background: #101218; color: #DDF56B; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 40px;">RA</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4B5162;">Kim yapıyor</span>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em;">Karşında bir ajans değil, bir mühendis var.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5162;">rosos'u Konya'dan Read Aloush yürütüyor. Mekatronik mühendisi; gömülü yazılım mühendisi olarak çalışıyor ve yukarıdaki örnek siteleri de kendisi yaptı. Siparişini baştan sona aynı kişiyle konuşursun: tasarım, kurulum ve teslimden sonraki destek dahil.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px;">
+<a href="https://readaloush.com" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 0 22px; border-radius: 12px; border: 1px solid #C9CCD6; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">readaloush.com</a>
+<a href="https://wa.me/905526767983" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 0 22px; border-radius: 12px; border: 1px solid #C9CCD6; color: #101218; text-decoration: none; font-size: 15px; font-weight: 600;">WhatsApp'tan yaz</a>
+</div>
 </div>
 </div>
 </section>
